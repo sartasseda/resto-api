@@ -1,0 +1,68 @@
+{
+  "tables": [
+    {
+      "id": 1,
+      "tableNumber": 1,
+      "capacity": 4,
+      "status": "occupied"
+    },
+    {
+      "id": 2,
+      "tableNumber": 2,
+      "capacity": 6,
+      "status": "available"
+    },
+    {
+      "id": 3,
+      "tableNumber": 1,
+      "capacity": 4,
+      "status": "empty"
+    },
+    {
+      "id": 4,
+      "tableNumber": 3,
+      "capacity": 3,
+      "status": "empty"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Adana Kebap",
+      "price": 350,
+      "categoryId": 1,
+      "isAvailable": true
+    },
+    {
+      "id": 2,
+      "name": "Mercimek Çorbası",
+      "price": 90,
+      "categoryId": 1,
+      "isAvailable": true
+    },
+    {
+      "id": 3,
+      "name": "domates çorbası",
+      "price": 350,
+      "categoryId": 1,
+      "isAvailable": true
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "tableId": 1,
+      "items": [
+        {
+          "productId": 1,
+          "name": "Adana Kebap",
+          "price": 350,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 350,
+      "status": "preparing",
+      "createdAt": "2026-08-18T21:19:49.368Z"
+    }
+  ]
+}
