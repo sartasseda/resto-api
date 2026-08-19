@@ -97,7 +97,7 @@ const resetTable = (req, res) => {
     // Masayı boş olarak işaretle
     db.tables[tableIndex].status = "empty";
 
-    // İsteğe bağlı: Bu masaya ait aktif sipariş varsa onları da "completed" yapabilirsin
+    // İsteğe bağlı: Bu masaya ait aktif sipariş varsa onları da "completed" yapabilirsin.(tamamlanabilir otomati Kapatır.)
     if (db.orders) {
         db.orders.forEach(order => {
             if (order.tableId === tableId && order.status !== "completed") {

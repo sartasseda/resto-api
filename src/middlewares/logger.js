@@ -1,9 +1,14 @@
-// Middlewares Her isteği Konsola yazar.
-
-function logger(req, res, next) {
+// src/middlewares/logger.js
+// Middlewares isteği Konsola yazdırır. 
+const logger = (req, res, next) => {
     const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${req.method} ${req.originalUrl}`);
-    next(); // Bir sonraki adıma geç
-}
+    const method = req.method;
+    const url = req.originalUrl;
+
+    console.log(`[${timestamp}] ---> ${method} isteği atıldı: ${url}`);
+    
+    // next() komutu, isteğin durdurulmayıp bir sonraki adıma (controller'a) gitmesini sağlar.
+    next(); 
+};
 
 module.exports = logger;
